@@ -139,7 +139,7 @@ const Homepage = () => {
     ];
 
     return (
-        <div className='px-4 pt-10 bg-white w-full flex flex-col gap-9'>
+        <div className='px-4 pt-10 bg-white dark:bg-[#03050B] w-full flex flex-col gap-9'>
             <div className='flex flex-col items-center justify-center gap-4'>
                 <div className='size-16 rounded-[10px] bg-gradient-to-br from-[#7DA6FF] to-[#1A63FF] flex items-center justify-center text-white'>
                     <Hammer className='size-8' />
@@ -148,7 +148,7 @@ const Homepage = () => {
                     <p className='text-xs font-extrabold uppercase bg-gradient-to-br from-[#7DA6FF] to-[#1A63FF] bg-clip-text text-transparent text-center'>
                         17mov Phone
                     </p>
-                    <h2 className='text-[20px] font-extrabold text-black text-center'>
+                    <h2 className='text-[20px] font-extrabold text-black dark:text-white text-center'>
                         {getLang('Welcome').replace('%s', getLang('app_name'))}
                     </h2>
                 </div>
@@ -160,7 +160,7 @@ const Homepage = () => {
                     </div>
                     <div className='flex flex-col items-center justify-center'>
                         <p className='text-xs text-[#7A7E96] font-normal'>{getLang('Settings:Number')}</p>
-                        <h3 className='text-black font-bold text-sm'>{getCurrentNumber()}</h3>
+                        <h3 className='text-black dark:text-white font-bold text-sm'>{getCurrentNumber()}</h3>
                     </div>
                 </div>
                 <div className='flex flex-col items-center justify-center gap-2.5'>
@@ -169,15 +169,15 @@ const Homepage = () => {
                     </div>
                     <div className='flex flex-col items-center justify-center'>
                         <p className='text-xs text-[#7A7E96] font-normal'>{getLang('Settings:Theme')}</p>
-                        <h3 className='text-black font-bold text-sm'>{getLang(`Settings:Theme.${settings.theme}`)}</h3>
+                        <h3 className='text-black dark:text-white font-bold text-sm'>{getLang(`Settings:Theme.${settings.theme}`)}</h3>
                     </div>
                 </div>
             </div>
             <div className='flex flex-col gap-4'>
-                <h3 className='text-black text-base font-bold text-center'>{getLang('Components:Title')}</h3>
+                <h3 className='text-black dark:text-white text-base font-bold text-center'>{getLang('Components:Title')}</h3>
                 {componentsList.map((component, idx) => (
                     <div key={idx} className='flex flex-col gap-1'>
-                        <h4 className='text-[#000] text-xs font-bold'>{component.label}</h4>
+                        <h4 className='text-black dark:text-white text-xs font-bold'>{component.label}</h4>
                         {component.actions.map((action, actionIdx) => (
                             <button
                                 key={actionIdx}

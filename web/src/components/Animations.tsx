@@ -149,7 +149,7 @@ const InsideAppAnimation = ({
                 className={
                     classNameOverride ??
                     cn(
-                        'absolute left-[-1px] top-0 size-full !w-[302px] will-change-transform overflow-y-auto overflow-x-hidden px-3 pt-4 pb-12 bg-white',
+                        'absolute left-[-1px] top-0 size-full !w-[302px] will-change-transform overflow-y-auto overflow-x-hidden px-3 pt-4 pb-12 bg-white dark:bg-[#03050B]',
                         className,
                     )
                 }
@@ -164,7 +164,7 @@ const InsideAppAnimation = ({
             className={
                 classNameOverride ??
                 cn(
-                    'absolute left-[-1px] top-0 size-full !w-[302px] will-change-transform overflow-y-auto overflow-x-hidden px-3 pt-4 pb-12 bg-white',
+                    'absolute left-[-1px] top-0 size-full !w-[302px] will-change-transform overflow-y-auto overflow-x-hidden px-3 pt-4 pb-12 bg-white dark:bg-[#03050B]',
                     className,
                 )
             }

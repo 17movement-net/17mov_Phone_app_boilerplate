@@ -32,5 +32,5 @@ Locale["en"] = {
 
     ["Routing:Page.BackTo"] = "Back to",
     ["Routing:Page.Homepage"] = "Homepage",
-    ["Routing:Page.Description"] = "This is another page opened from the homepage. You can edit this page in ui/src/views/Page.tsx file.",
+    ["Routing:Page.Description"] = "This is another page opened from the homepage. You can edit this page in web/src/views/Page.tsx file.",
 }

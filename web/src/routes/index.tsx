@@ -7,7 +7,7 @@ export const AppRoutes: RouteType[] = [
     {
         path: '/',
         element: <Homepage />,
-        className: 'bg-white',
+        className: '',
     },
     {
         path: '/page',
