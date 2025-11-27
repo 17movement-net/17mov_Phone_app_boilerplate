@@ -18,12 +18,12 @@ const Page = () => {
                 </button>
                 <div className='flex flex-col flex-auto'>
                     <p className='text-xs text-[#7A7E96]'>{getLang('Routing:Page.BackTo')}</p>
-                    <h2 className='text-sm font-bold text-black'>{getLang('Routing:Page.Homepage')}</h2>
+                    <h2 className='text-sm font-bold text-black dark:text-white'>{getLang('Routing:Page.Homepage')}</h2>
                 </div>
             </div>
 
             <div className='flex flex-col items-center justify-center flex-auto'>
-                <p className='text-base text-[#7A7E96] text-center'>{getLang('Routing:Page.Description')}</p>
+                <p className='text-sm text-[#7A7E96] text-center'>{getLang('Routing:Page.Description')}</p>
             </div>
         </div>
     );
