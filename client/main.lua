@@ -7,7 +7,7 @@ function RegisterApp()
         label = "Test App",
         ui = url:find("http") and url or ("https://cfx-nui-%s/%s"):format(resourceName, url),
         icon = url:find("http") and ("%s/icon.svg"):format(url) or
-            ("https://cfx-nui-%s//ui/dist/icon.svg"):format(resourceName),
+            ("https://cfx-nui-%s//web/build/icon.svg"):format(resourceName),
         iconBackground = {
             angle = 135,
             colors = { '#7DA6FF', '#1A63FF' },
