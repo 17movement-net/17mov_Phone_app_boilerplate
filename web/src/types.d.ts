@@ -17,6 +17,8 @@ declare function openGIFPicker(onSelected: (data: string) => void): void;
 
 declare function openEmojiPicker(onSelected: (data: string) => void): void;
 
+declare function setKeepInput(options: boolean): void;
+
 declare function setExternalRouting(
     resourceName: string,
     routes: {
