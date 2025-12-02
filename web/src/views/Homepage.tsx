@@ -1,8 +1,9 @@
 import { useCallback } from 'react';
-import { CardSim, ChevronRight, Hammer, SunMoon } from 'lucide-react';
+import { CardSim, ChevronRight, Hammer, Power, SunMoon, UserRound } from 'lucide-react';
 
 import { useNavigateWithApps } from '@/hooks/useNavigateWithApps';
 import { useLanguage } from '@/hooks/useLanguage';
+import { useExternalAuth } from '@/contexts/ExternalAuthContext';
 
 interface ComponentAction {
     label: string;
@@ -18,6 +19,8 @@ const Homepage = () => {
     const { getLang } = useLanguage();
     const navigate = useNavigateWithApps();
     const settings = useSettings();
+    const currentUser = useCurrentUser();
+    const { logoutUser } = useExternalAuth();
 
     // Callbacks
     const cameraCallback = useCallback((data: string) => {
@@ -140,6 +143,22 @@ const Homepage = () => {
 
     return (
         <div className='px-4 pt-10 bg-white dark:bg-[#03050B] w-full flex flex-col gap-9'>
+            {currentUser && (
+                <div className='flex items-center justify-between'>
+                    <div className='flex items-center gap-2.5'>
+                        <div className='size-10 rounded-[10px] bg-gradient-to-br from-[#7DA6FF] to-[#1A63FF] flex items-center justify-center text-white'>
+                            <UserRound className='size-5' />
+                        </div>
+                        <div className='flex flex-col'>
+                            <h3 className='text-[10px] font-bold text-[#7A7E96]'>{getLang('Userbar:Title')}</h3>
+                            <p className='text-sm text-black dark:text-white font-bold'>{currentUser.username}</p>
+                        </div>
+                    </div>
+                    <button type='button' className='size-8 rounded-full bg-[#7A7E96]/15 text-[#7A7E96] flex items-center justify-center transition duration-300 hover:bg-[#7A7E96] hover:text-white' onClick={logoutUser}>
+                        <Power className='size-3' />
+                    </button>
+                </div>
+            )}
             <div className='flex flex-col items-center justify-center gap-4'>
                 <div className='size-16 rounded-[10px] bg-gradient-to-br from-[#7DA6FF] to-[#1A63FF] flex items-center justify-center text-white'>
                     <Hammer className='size-8' />

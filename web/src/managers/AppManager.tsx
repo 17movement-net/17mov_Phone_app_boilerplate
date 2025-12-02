@@ -1,14 +1,16 @@
-import { useDispatch } from 'react-redux';
+// import { useDispatch } from 'react-redux';
 
-import { useNuiEvent } from '@/hooks/useNui';
-import { updateApp } from '@/store/appSlice';
+// import { useNuiEvent } from '@/hooks/useNui';
+// import { updateApp } from '@/store/appSlice';
 
 export const AppStoreManager = () => {
-    const dispatch = useDispatch();
+    // const dispatch = useDispatch();
 
-    useNuiEvent<string>('App:SetResourceName', (resourceName) => {
-        dispatch(updateApp('resourceName', resourceName));
-    });
+    // Here you can register your own store managers
+    // Example:
+    // useNuiEvent<'App:FocusChanged'>('App:FocusChanged', (focusState) => {
+    //     dispatch(updateApp({ isFocused: focusState }));
+    // });
 
     return null;
 };

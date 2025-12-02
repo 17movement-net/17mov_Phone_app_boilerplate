@@ -1,5 +1,6 @@
 import { useEffect, useLayoutEffect, useRef } from 'react';
-import { useLocation, useNavigate } from 'react-router-dom';
+import { useLocation } from 'react-router-dom';
+import { useNavigateWithApps } from './hooks/useNavigateWithApps';
 
 declare global {
     interface Window extends Partial<ExternalAppDispatcher> {
@@ -8,7 +9,7 @@ declare global {
 }
 
 type ExternalAppActionMap = {
-    NAVIGATE: { payload: { path: string }; result: void };
+    Navigate: { payload: { path: string }; result: void };
     GetCurrentRoute: { payload: unknown; result: string };
 };
 
@@ -27,7 +28,7 @@ type ExternalAppDispatcher = {
 
 const ExternalRpcBridge = () => {
     const location = useLocation();
-    const navigate = useNavigate();
+    const navigate = useNavigateWithApps();
 
     const locationRef = useRef(location);
 

@@ -25,7 +25,6 @@ CreateThread(function()
     end
 end)
 
-
 RegisterNetEvent("17mov_Phone:Client:Ready", function()
     RegisterApp()
 end)

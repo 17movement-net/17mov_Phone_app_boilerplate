@@ -6,14 +6,17 @@ import store from '@/store';
 import LanguageProvider from './LanguageProvider';
 import NavigateProvider from './NavigateProvider';
 import NuiProvider from './NuiProvider';
+import { ExternalAuthProvider } from './ExternalAuthProvider';
 
 const ProvidersManager = ({ children }: { children: ReactNode }) => {
     return (
         <Provider store={store}>
             <NavigateProvider>
-                <NuiProvider>
-                    <LanguageProvider>{children}</LanguageProvider>
-                </NuiProvider>
+                <ExternalAuthProvider authPage='/auth' homePage='/'>
+                    <NuiProvider>
+                        <LanguageProvider>{children}</LanguageProvider>
+                    </NuiProvider>
+                </ExternalAuthProvider>
             </NavigateProvider>
         </Provider>
     );

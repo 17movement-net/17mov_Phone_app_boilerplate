@@ -3,7 +3,7 @@ game "gta5"
 lua54 "yes"
 
 author "17movement.net"
-description "External App Boilerplate for 17mov's Phone"
+description "External App Boilerplate with auth system for 17mov's Phone"
 version "1.0.0"
 
 client_scripts {

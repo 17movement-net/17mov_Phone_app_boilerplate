@@ -33,3 +33,7 @@ html > body[data-scroll-locked] {
     height: 0 !important;
     display: none !important;
 }
+
+*:focus {
+    outline: none;
+}

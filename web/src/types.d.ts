@@ -17,6 +17,25 @@ declare function openGIFPicker(onSelected: (data: string) => void): void;
 
 declare function openEmojiPicker(onSelected: (data: string) => void): void;
 
+declare function setKeepInput(options: boolean): void;
+
+declare function handleLogin(
+    username: string,
+    password: string
+): Promise<{ success: boolean; message: string; }>;
+
+declare function handleRegister(
+    username: string,
+    password: string,
+    accountData: unknown,
+): Promise<{ success: boolean; message: string; }>;
+
+declare function useCurrentUser(): { username: string; accountData: unknown } | null;
+
+declare function useIsAuthenticated(): boolean;
+
+declare function useSignOut(): void;
+
 declare function setExternalRouting(
     resourceName: string,
     routes: {
