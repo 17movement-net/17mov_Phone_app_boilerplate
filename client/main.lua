@@ -16,6 +16,11 @@ function RegisterApp()
         preInstalled = true,
         resourceName = resourceName,
         rating = 4.5,
+        -- Optional job restriction 
+        -- job = {
+        --     name = "police",
+        --     grade = 0
+        -- }
     })
 end
 
