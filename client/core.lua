@@ -5,10 +5,13 @@ Core.SendNuiMessage = function(action, payload)
         Wait(100)
     end
 
-    SendNUIMessage({
-        action = action,
-        payload = payload
-    })
+    exports['17mov_Phone']:SendAppMessage(
+        Config.AppName or "testapp",
+        {
+            action = action,
+            payload = payload,
+        }
+    )
 end
 
 RegisterNUICallback('Core:NuiLoaded', function(data, cb)
