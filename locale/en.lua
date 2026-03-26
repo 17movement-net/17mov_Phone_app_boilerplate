@@ -30,6 +30,8 @@ Locale["en"] = {
     ["Components:Utils.Actions.OpenGIFPicker"] = "Open GIF picker",
     ["Components:Utils.Actions.OpenEmojiPicker"] = "Open Emoji picker",
 
+    ["Components:Map"] = "Map component",
+
     ["Routing:Page.BackTo"] = "Back to",
     ["Routing:Page.Homepage"] = "Homepage",
     ["Routing:Page.Description"] = "This is another page opened from the homepage. You can edit this page in web/src/views/Page.tsx file.",

@@ -100,7 +100,7 @@ const InsideAppAnimation = ({
                 className={
                     classNameOverride ??
                     cn(
-                        "absolute left-[-1px] top-0 size-full !w-[302px] will-change-transform overflow-y-auto overflow-x-hidden px-3 pt-4 pb-12 bg-white dark:bg-[#03050B]",
+                        "absolute left-[-1px] top-0 size-full !w-[302px] will-change-transform overflow-y-auto overflow-x-hidden px-3 pt-8 pb-6 bg-white dark:bg-[#03050B]",
                         className
                     )
                 }
@@ -115,7 +115,7 @@ const InsideAppAnimation = ({
             className={
                 classNameOverride ??
                 cn(
-                    "absolute left-[-1px] top-0 size-full !w-[302px] will-change-transform overflow-y-auto overflow-x-hidden px-3 pt-4 pb-12 bg-white dark:bg-[#03050B]",
+                    "absolute left-[-1px] top-0 size-full !w-[302px] will-change-transform overflow-y-auto overflow-x-hidden px-3 pt-8 pb-6 bg-white dark:bg-[#03050B]",
                     className
                 )
             }
@@ -193,8 +193,8 @@ const AppSubRoutes = ({ routes }: { routes: RouteType[] }) => {
     const location = useLocation();
 
     const segments = location.pathname.split("/").filter(Boolean);
-    const activeKey = segments.length === 0 
-        ? "_root" 
+    const activeKey = segments.length === 0
+        ? "_root"
         : segments.join("/");
 
     return (

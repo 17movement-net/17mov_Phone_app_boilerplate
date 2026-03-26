@@ -43,3 +43,5 @@ declare function LoadRoot(): void;
 declare function useSettings(): SettingsType;
 
 declare function getCurrentNumber(): string;
+
+declare function getMap(props: { x: number; y: number; width?: number; height?: number }): Promise<string | null>;

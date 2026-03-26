@@ -7,7 +7,7 @@ const Page = () => {
     const navigate = useNavigateWithApps();
 
     return (
-        <div className='pt-10 size-full flex flex-col gap-6'>
+        <div className='pt-2 size-full flex flex-col gap-6'>
             <div className='flex items-center gap-4'>
                 <button
                     type='button'
